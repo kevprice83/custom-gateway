@@ -1,7 +1,5 @@
 # Pull from Red Hat
-FROM 3scale-amp20-beta/apicast-gateway:0.4-2
-
-MAINTAINER u203095 <manuel.schulz@sbb.ch>
+FROM registry.access.redhat.com/3scale-amp20/apicast-gateway/images
 
 USER root
 
