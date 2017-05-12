@@ -1,5 +1,5 @@
 # Pull from Red Hat
-FROM registry.access.redhat.com/3scale-amp20/apicast-gateway/images
+FROM registry.access.redh3scale-amp20/apicast-gateway
 
 USER root
 
