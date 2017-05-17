@@ -1,5 +1,5 @@
 # Pull from Red Hat
-FROM registry.access.redhat.com/3scale-amp20/apicast-gateway
+FROM quay.io/3scale/apicast:master
 
 USER root
 
