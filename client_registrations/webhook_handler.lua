@@ -77,10 +77,16 @@ local function client_registration_request(method, client_details, url, access_t
 end
 
 local function register_client(client_details)
-  local access_token = env.get('RHSSO_INITIAL_TOKEN')
+  if env.get('RHSSO_INITIAL_TOKEN') then
+    local access_token = env.get('RHSSO_INITIAL_TOKEN')
+  end
   local url = ngx.var.rhsso_endpoint.."/clients-registrations/default"
   local method = ngx.HTTP_POST
-  client_registration_request(method, client_details, url, access_token)
+  if access_token then
+    client_registration_request(method, client_details, url, access_token)
+  else
+    client_registration_request(method, client_details, url)
+  end
 end
 
 local function update_client(client_details)
